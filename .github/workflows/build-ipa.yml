@@ -39,6 +39,14 @@ jobs:
           sudo xcode-select -s "$XCODE/Contents/Developer"
           xcodebuild -version
 
+      - name: 🔧 初始化 Xcode
+        run: |
+          echo ">> 首次启动 Xcode 组件..."
+          sudo xcodebuild -runFirstLaunch 2>/dev/null || echo "  跳过（或已完成）"
+          echo ">> 检查 iOS 平台..."
+          ls /Applications/Xcode_16.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/ 2>/dev/null || echo "⚠️ 平台目录异常"
+
+
       - name: 📋 列出 Scheme
         run: xcodebuild -list -project Huati.xcodeproj
 
