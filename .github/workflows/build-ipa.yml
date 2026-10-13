@@ -32,7 +32,7 @@ jobs:
       - name: 🔧 创建 xcconfig（禁用严格并发）
         run: |
           cat > disable_concurrency.xcconfig << 'EOF'
-          OTHER_SWIFT_FLAGS = $(inherited) -disable-upcoming-feature StrictConcurrency
+          OTHER_SWIFT_FLAGS = $(inherited) -Xfrontend -disable-upcoming-feature -Xfrontend StrictConcurrency
           EOF
           echo "✅ xcconfig 已创建"
 
