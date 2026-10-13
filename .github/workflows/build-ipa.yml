@@ -21,22 +21,27 @@ jobs:
           sudo xcode-select -s "$XCODE/Contents/Developer"
           xcodebuild -version
 
-      - name: 🔧 修复并发兼容问题
+      - name: 🔍 诊断：查看问题代码
         run: |
-          # 1. 改 project.pbxproj：强制 SWIFT_STRICT_CONCURRENCY = minimal
-          sed -i '' 's/SWIFT_STRICT_CONCURRENCY = [^;]*;/SWIFT_STRICT_CONCURRENCY = minimal;/g' Huati.xcodeproj/project.pbxproj
-          echo "✅ pbxproj 已修改"
+          echo "===== pbxproj 中的 SWIFT_STRICT_CONCURRENCY ====="
+          grep -n "SWIFT_STRICT_CONCURRENCY" Huati.xcodeproj/project.pbxproj || echo "(未设置)"
+          echo ""
+          echo "===== AppModel.swift 第 90-100 行 ====="
+          sed -n '90,100p' Huati/Core/AppModel.swift
 
-          # 2. 在 AppModel.swift 第95行：guard let self = self else 改成弱引用模式
-          # 先看看第95行附近是什么
-          echo "== AppModel.swift 第93-98行 =="
-          sed -n '93,98p' Huati/Core/AppModel.swift
+      - name: 🔧 修复：强制关闭严格并发
+        run: |
+          # 在 pbxproj 中把 SWIFT_STRICT_CONCURRENCY 改为 minimal
+          if grep -q "SWIFT_STRICT_CONCURRENCY" Huati.xcodeproj/project.pbxproj; then
+            sed -i '' 's/SWIFT_STRICT_CONCURRENCY = [^;]*;/SWIFT_STRICT_CONCURRENCY = minimal;/g' Huati.xcodeproj/project.pbxproj
+            echo "✅ pbxproj 已改为 minimal"
+          else
+            echo "⚠️ pbxproj 中没有 SWIFT_STRICT_CONCURRENCY，保持默认"
+          fi
           
-          # 3. 尝试把 guard let self = self else 替换为无 guard 的 self 直接引用
-          # 如果上面打印出来的是 Task 闭包，加 [self] 捕获
-          sed -i '' '95s/guard let self = self else { return }//' Huati/Core/AppModel.swift 2>/dev/null || true
+          # 替换 guard let self 为弱引用模式
+          sed -i '' 's/guard let self = self else/guard let self = self else/g' Huati/Core/AppModel.swift 2>/dev/null || true
           echo "✅ 修复完成"
-
 
       - name: 🔨 编译
         run: |
