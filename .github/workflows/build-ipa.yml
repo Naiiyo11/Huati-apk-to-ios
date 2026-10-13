@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: Build iOS IPA
-    runs-on: macos-14          # ← 这个还活着！自带 Xcode 15
+    runs-on: macos-14
 
     steps:
       - name: 📥 拉取代码
@@ -14,16 +14,17 @@ jobs:
 
       - name: 🎯 选择 Xcode（15 优先）
         run: |
-          echo "== 可用 Xcode =="
-          ls /Applications | grep Xcode
-          # 强制选 15
           XCODE=$(ls -d /Applications/Xcode_15*.app 2>/dev/null | tail -1)
           if [ -z "$XCODE" ]; then
-            echo "⚠️ 15 不可用，回退 16"
             XCODE=$(ls -d /Applications/Xcode_16*.app 2>/dev/null | tail -1)
           fi
           sudo xcode-select -s "$XCODE/Contents/Developer"
           xcodebuild -version
+
+      - name: 🔧 修复并发兼容
+        run: |
+          sed -i '' 's/guard let self else/guard let self = self else/g' Huati/Core/AppModel.swift
+          echo "✅ 修复完成"
 
       - name: 🔨 编译
         run: |
@@ -36,10 +37,8 @@ jobs:
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO \
-            SWIFT_VERSION=5.0 \
-            SWIFT_STRICT_CONCURRENCY=minimal
+            SWIFT_VERSION=5.0
           echo "✅ Archive 成功"
-
 
       - name: 📦 打包 IPA
         run: |
