@@ -1,0 +1,125 @@
+name: Build Unsigned IPA
+
+on:
+  workflow_dispatch:       # 手动触发，去 Actions 页面点按钮就行
+    inputs:
+      scheme:
+        description: 'Xcode Scheme 名称（默认 Huati）'
+        required: false
+        default: 'Huati'
+
+jobs:
+  build:
+    name: Build iOS IPA
+    runs-on: macos-15       # 最新 macOS 跑者
+
+    steps:
+      # ===== 1. 拉取仓库代码 =====
+      - name: 📥 拉取代码
+        uses: actions/checkout@v4
+
+      # ===== 2. 查看并选择 Xcode 版本 =====
+      - name: 🔍 查看可用 Xcode
+        run: ls /Applications | grep Xcode
+
+      - name: 🎯 选择 Xcode 版本
+        run: |
+          echo "查找可用的 Xcode..."
+          # 优先选 Xcode 16，没有就用 15
+          XCODE=$(ls -d /Applications/Xcode_16*.app 2>/dev/null | tail -1)
+          if [ -z "$XCODE" ]; then
+            XCODE=$(ls -d /Applications/Xcode_15*.app 2>/dev/null | tail -1)
+          fi
+          if [ -z "$XCODE" ]; then
+            echo "❌ 错误：找不到 Xcode 15 或 16"
+            exit 1
+          fi
+          echo "✅ 选中: $XCODE"
+          sudo xcode-select -s "$XCODE/Contents/Developer"
+          xcodebuild -version
+
+      # ===== 3. 列出 Scheme 确认名字 =====
+      - name: 📋 列出项目 Scheme
+        run: |
+          echo "===== 工程中的 Scheme ====="
+          xcodebuild -list -project Huati.xcodeproj
+          echo "==========================="
+          echo "如果 Scheme 名不是 'Huati'，请记下正确的名字"
+          echo "下次运行时在手动触发界面修改 scheme 参数"
+
+      # ===== 4. 编译 Archive（不签名）=====
+      - name: 🔨 编译 Archive
+        run: |
+          SCHEME="${{ github.event.inputs.scheme }}"
+          echo ">> 使用 Scheme: $SCHEME"
+          echo ">> 开始编译（不签名）..."
+          
+          xcodebuild archive \
+            -project Huati.xcodeproj \
+            -scheme "$SCHEME" \
+            -configuration Release \
+            -sdk iphoneos \
+            -archivePath ./build/Huati.xcarchive \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            -destination 'generic/platform=iOS' \
+            | xcbeautify || xcodebuild archive \
+            -project Huati.xcodeproj \
+            -scheme "$SCHEME" \
+            -configuration Release \
+            -sdk iphoneos \
+            -archivePath ./build/Huati.xcarchive \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+          
+          if [ ! -d "./build/Huati.xcarchive" ]; then
+            echo "❌ Archive 生成失败，请查看上方日志"
+            exit 1
+          fi
+          echo "✅ Archive 生成成功"
+
+      # ===== 5. 从 Archive 打包成 IPA =====
+      - name: 📦 打包 IPA
+        run: |
+          ARCHIVE_PATH="./build/Huati.xcarchive"
+          
+          # 检查 Products 目录
+          PRODUCTS_DIR="$ARCHIVE_PATH/Products"
+          if [ ! -d "$PRODUCTS_DIR/Applications" ]; then
+            echo "❌ 找不到 Applications 目录"
+            ls -la "$PRODUCTS_DIR" 2>/dev/null || echo "Products 目录不存在"
+            exit 1
+          fi
+          
+          cd "$PRODUCTS_DIR"
+          
+          # 重命名 Applications → Payload
+          cp -R Applications Payload
+          
+          # 压缩 Payload
+          zip -qr Huati.ipa Payload
+          
+          # 移到输出位置
+          mv Huati.ipa ../../Huati-unsigned.ipa
+          cd ../..
+          
+          FILE_SIZE=$(ls -lh Huati-unsigned.ipa | awk '{print $5}')
+          echo "✅ IPA 打包完成: Huati-unsigned.ipa (${FILE_SIZE})"
+
+      # ===== 6. 上传 IPA 供下载 =====
+      - name: 📤 上传 IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: Huati-unsigned-IPA
+          path: ./Huati-unsigned.ipa
+          retention-days: 7     # 保留 7 天，足够你下载
+
+      # ===== 7. （可选）也保留 Archive =====
+      - name: 📤 上传 Archive（备用）
+        uses: actions/upload-artifact@v4
+        with:
+          name: Huati-xcarchive
+          path: ./build/Huati.xcarchive
+          retention-days: 3
