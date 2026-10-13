@@ -29,12 +29,28 @@ jobs:
           echo "===== AppModel.swift 第 90-100 行 ====="
           sed -n '90,100p' Huati/Core/AppModel.swift
 
-      - name: 🔧 创建 xcconfig（禁用严格并发）
+      - name: 🔧 修复 AppModel.swift 并发问题
         run: |
-          cat > disable_concurrency.xcconfig << 'EOF'
-          OTHER_SWIFT_FLAGS = $(inherited) -Xfrontend -disable-upcoming-feature -Xfrontend StrictConcurrency
-          EOF
-          echo "✅ xcconfig 已创建"
+          python3 << 'PYEOF'
+          with open('Huati/Core/AppModel.swift', 'r') as f:
+              lines = f.readlines()
+          
+          # 第93行（0-based:92）是 Timer 闭包 { [weak self] _ in
+          # 第94行（0-based:93）是 Task { @MainActor in  
+          # 第95行（0-based:94）是 guard let self else { return }
+          
+          # 在 Timer 闭包后插入 guard
+          lines.insert(93, '            guard let self else { return }\n')
+          # Task 行现在在 94（0-based）
+          lines[94] = lines[94].replace('Task { @MainActor in', 'Task { @MainActor [self] in')
+          # 删除原来的 guard 行（现在在 95，0-based）
+          del lines[95]
+          
+          with open('Huati/Core/AppModel.swift', 'w') as f:
+              f.writelines(lines)
+          print("✅ 源码修复完成")
+          PYEOF
+
 
       - name: 🔨 编译
         run: |
