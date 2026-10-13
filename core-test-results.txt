@@ -1,0 +1,148 @@
+TZ=UTC
+✔ coordinate conversion round-trips all known checkpoints (1.1717ms)
+✔ random origins stay in the actual campus polygon (2.2947ms)
+✔ invalid parameters fail before record creation (0.3375ms)
+✔ basic routes visit every checkpoint and do not truncate an automatic route (1.987ms)
+✔ manual road route seed 1 satisfies checkpoints and bounds (33.1424ms)
+✔ manual road route seed 2 satisfies checkpoints and bounds (29.6518ms)
+✔ manual road route seed 3 satisfies checkpoints and bounds (22.6712ms)
+✔ manual road route seed 4 satisfies checkpoints and bounds (23.7942ms)
+✔ manual road route seed 5 satisfies checkpoints and bounds (24.1632ms)
+✔ manual road route seed 6 satisfies checkpoints and bounds (22.7546ms)
+✔ manual road route seed 7 satisfies checkpoints and bounds (23.3851ms)
+✔ manual road route seed 8 satisfies checkpoints and bounds (23.1873ms)
+✔ manual road route seed 9 satisfies checkpoints and bounds (22.8346ms)
+✔ manual road route seed 10 satisfies checkpoints and bounds (24.1929ms)
+✔ manual road route seed 11 satisfies checkpoints and bounds (23.0222ms)
+✔ manual road route seed 12 satisfies checkpoints and bounds (23.6467ms)
+✔ manual road route seed 13 satisfies checkpoints and bounds (22.8208ms)
+✔ manual road route seed 14 satisfies checkpoints and bounds (22.4357ms)
+✔ manual road route seed 15 satisfies checkpoints and bounds (23.2861ms)
+✔ manual road route seed 16 satisfies checkpoints and bounds (22.5923ms)
+✔ manual road route seed 17 satisfies checkpoints and bounds (23.5699ms)
+✔ manual road route seed 18 satisfies checkpoints and bounds (22.2484ms)
+✔ manual road route seed 19 satisfies checkpoints and bounds (22.212ms)
+✔ manual road route seed 20 satisfies checkpoints and bounds (21.9334ms)
+✔ manual road route seed 21 satisfies checkpoints and bounds (20.4313ms)
+✔ manual road route seed 22 satisfies checkpoints and bounds (24.1155ms)
+✔ manual road route seed 23 satisfies checkpoints and bounds (21.2864ms)
+✔ manual road route seed 24 satisfies checkpoints and bounds (23.8782ms)
+✔ automatic road routes have no manual upper-bound restriction (198.4765ms)
+✔ pausing freezes progress across reopening and continuing preserves duration (0.617ms)
+✔ pause timestamps become stationary intervals in the uploaded track (1.0049ms)
+✔ discard stops local work and blocks resume, including uncertain states (0.2401ms)
+✔ random milliseconds strictly stay between 12 and 16 minutes (0.2336ms)
+✔ schedule respects Beijing day independently of host timezone (0.3393ms)
+✔ dated time reservation prevents duplicates while allowing another time today (0.1969ms)
+✔ preparation rejects yesterday, pre-opening, stale and other-account points (0.1407ms)
+✔ directory stays separate from active three checkpoints (0.2959ms)
+✔ native bridge returns structured errors without crashes (0.102ms)
+✔ protocol AES fixture has the expected IV:ciphertext format (0.3533ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 842.1591
+
+
+TZ=Asia/Shanghai
+✔ coordinate conversion round-trips all known checkpoints (1.2345ms)
+✔ random origins stay in the actual campus polygon (2.2793ms)
+✔ invalid parameters fail before record creation (0.2877ms)
+✔ basic routes visit every checkpoint and do not truncate an automatic route (2.2519ms)
+✔ manual road route seed 1 satisfies checkpoints and bounds (28.1223ms)
+✔ manual road route seed 2 satisfies checkpoints and bounds (32.9724ms)
+✔ manual road route seed 3 satisfies checkpoints and bounds (26.0091ms)
+✔ manual road route seed 4 satisfies checkpoints and bounds (24.3036ms)
+✔ manual road route seed 5 satisfies checkpoints and bounds (22.3462ms)
+✔ manual road route seed 6 satisfies checkpoints and bounds (22.3743ms)
+✔ manual road route seed 7 satisfies checkpoints and bounds (21.6537ms)
+✔ manual road route seed 8 satisfies checkpoints and bounds (24.723ms)
+✔ manual road route seed 9 satisfies checkpoints and bounds (21.9717ms)
+✔ manual road route seed 10 satisfies checkpoints and bounds (24.6434ms)
+✔ manual road route seed 11 satisfies checkpoints and bounds (21.9278ms)
+✔ manual road route seed 12 satisfies checkpoints and bounds (24.027ms)
+✔ manual road route seed 13 satisfies checkpoints and bounds (22.9075ms)
+✔ manual road route seed 14 satisfies checkpoints and bounds (23.1144ms)
+✔ manual road route seed 15 satisfies checkpoints and bounds (22.0732ms)
+✔ manual road route seed 16 satisfies checkpoints and bounds (23.3928ms)
+✔ manual road route seed 17 satisfies checkpoints and bounds (23.6092ms)
+✔ manual road route seed 18 satisfies checkpoints and bounds (24.3442ms)
+✔ manual road route seed 19 satisfies checkpoints and bounds (23.8396ms)
+✔ manual road route seed 20 satisfies checkpoints and bounds (22.1599ms)
+✔ manual road route seed 21 satisfies checkpoints and bounds (20.7652ms)
+✔ manual road route seed 22 satisfies checkpoints and bounds (23.7766ms)
+✔ manual road route seed 23 satisfies checkpoints and bounds (22.5517ms)
+✔ manual road route seed 24 satisfies checkpoints and bounds (22.8411ms)
+✔ automatic road routes have no manual upper-bound restriction (198.7244ms)
+✔ pausing freezes progress across reopening and continuing preserves duration (0.2796ms)
+✔ pause timestamps become stationary intervals in the uploaded track (0.6474ms)
+✔ discard stops local work and blocks resume, including uncertain states (0.2064ms)
+✔ random milliseconds strictly stay between 12 and 16 minutes (0.1978ms)
+✔ schedule respects Beijing day independently of host timezone (0.3386ms)
+✔ dated time reservation prevents duplicates while allowing another time today (0.1618ms)
+✔ preparation rejects yesterday, pre-opening, stale and other-account points (0.1129ms)
+✔ directory stays separate from active three checkpoints (0.2365ms)
+✔ native bridge returns structured errors without crashes (0.0931ms)
+✔ protocol AES fixture has the expected IV:ciphertext format (0.3566ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 844.144
+
+
+TZ=America/Los_Angeles
+✔ coordinate conversion round-trips all known checkpoints (1.1543ms)
+✔ random origins stay in the actual campus polygon (2.1305ms)
+✔ invalid parameters fail before record creation (0.3482ms)
+✔ basic routes visit every checkpoint and do not truncate an automatic route (1.9099ms)
+✔ manual road route seed 1 satisfies checkpoints and bounds (31.7234ms)
+✔ manual road route seed 2 satisfies checkpoints and bounds (32.055ms)
+✔ manual road route seed 3 satisfies checkpoints and bounds (27.6622ms)
+✔ manual road route seed 4 satisfies checkpoints and bounds (25.83ms)
+✔ manual road route seed 5 satisfies checkpoints and bounds (23.8181ms)
+✔ manual road route seed 6 satisfies checkpoints and bounds (23.9443ms)
+✔ manual road route seed 7 satisfies checkpoints and bounds (25.1482ms)
+✔ manual road route seed 8 satisfies checkpoints and bounds (24.6435ms)
+✔ manual road route seed 9 satisfies checkpoints and bounds (22.9386ms)
+✔ manual road route seed 10 satisfies checkpoints and bounds (24.073ms)
+✔ manual road route seed 11 satisfies checkpoints and bounds (23.6413ms)
+✔ manual road route seed 12 satisfies checkpoints and bounds (25.8846ms)
+✔ manual road route seed 13 satisfies checkpoints and bounds (24.6542ms)
+✔ manual road route seed 14 satisfies checkpoints and bounds (24.5656ms)
+✔ manual road route seed 15 satisfies checkpoints and bounds (22.8746ms)
+✔ manual road route seed 16 satisfies checkpoints and bounds (24.2986ms)
+✔ manual road route seed 17 satisfies checkpoints and bounds (24.1003ms)
+✔ manual road route seed 18 satisfies checkpoints and bounds (24.1254ms)
+✔ manual road route seed 19 satisfies checkpoints and bounds (26.2988ms)
+✔ manual road route seed 20 satisfies checkpoints and bounds (24.1332ms)
+✔ manual road route seed 21 satisfies checkpoints and bounds (23.73ms)
+✔ manual road route seed 22 satisfies checkpoints and bounds (25.0718ms)
+✔ manual road route seed 23 satisfies checkpoints and bounds (25.1377ms)
+✔ manual road route seed 24 satisfies checkpoints and bounds (25.0497ms)
+✔ automatic road routes have no manual upper-bound restriction (216.8475ms)
+✔ pausing freezes progress across reopening and continuing preserves duration (0.5186ms)
+✔ pause timestamps become stationary intervals in the uploaded track (0.6356ms)
+✔ discard stops local work and blocks resume, including uncertain states (0.1901ms)
+✔ random milliseconds strictly stay between 12 and 16 minutes (0.1815ms)
+✔ schedule respects Beijing day independently of host timezone (0.3219ms)
+✔ dated time reservation prevents duplicates while allowing another time today (0.1496ms)
+✔ preparation rejects yesterday, pre-opening, stale and other-account points (0.1159ms)
+✔ directory stays separate from active three checkpoints (0.2339ms)
+✔ native bridge returns structured errors without crashes (0.0935ms)
+✔ protocol AES fixture has the expected IV:ciphertext format (0.3907ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 900.2336

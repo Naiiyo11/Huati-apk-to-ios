@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	"archiveVersion" = "1";
+	"classes" = {
+	};
+	"objectVersion" = "56";
+	"objects" = {
+		"17BA0473D695A907A6D8F095" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Huati/Core/AppModel.swift";
+			"sourceTree" = "<group>";
+		};
+		"86619490A83265182AC56AA4" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Huati/Core/BackgroundCoordinator.swift";
+			"sourceTree" = "<group>";
+		};
+		"47F0921F6E044775C4FA7091" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Huati/Core/HuatiAPI.swift";
+			"sourceTree" = "<group>";
+		};
+		"8E1E13172D5EB0AB2E168453" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Huati/Core/PhoneLocation.swift";
+			"sourceTree" = "<group>";
+		};
+		"C67032624E4FC48858B46DCE" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Huati/Core/SecureStore.swift";
+			"sourceTree" = "<group>";
+		};
+		"1394538E5A4F6F28799026BE" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Huati/Core/Support.swift";
+			"sourceTree" = "<group>";
+		};
+		"4C402775A160B221ECEEA568" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Huati/HuatiApp.swift";
+			"sourceTree" = "<group>";
+		};
+		"792F8ACD031FA9CE57BE11A5" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Huati/UI/CampusMapView.swift";
+			"sourceTree" = "<group>";
+		};
+		"54D02EAE5E114B3CDE66C9D4" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Huati/UI/Pages.swift";
+			"sourceTree" = "<group>";
+		};
+		"BCB286A769FDEF5BFF58FF77" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Huati/UI/RootView.swift";
+			"sourceTree" = "<group>";
+		};
+		"63EC7E719D659FA0E8E5F705" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Huati/UI/Theme.swift";
+			"sourceTree" = "<group>";
+		};
+		"2659A08BBAA8350605F8DBC1" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "17BA0473D695A907A6D8F095";
+		};
+		"74AD1C36B86070794F4D1754" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "86619490A83265182AC56AA4";
+		};
+		"3AA6693EC8FDB6650D9F5184" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "47F0921F6E044775C4FA7091";
+		};
+		"0BF2C6D31AF841585F56FEDE" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "8E1E13172D5EB0AB2E168453";
+		};
+		"A5CA6C180302CE5D092B7EE5" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "C67032624E4FC48858B46DCE";
+		};
+		"9E9C9B6F03B666D98644DA7B" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "1394538E5A4F6F28799026BE";
+		};
+		"C0E96FAA9FDBCD4046BC1EC3" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "4C402775A160B221ECEEA568";
+		};
+		"4E1663BA37D39D4B8AE3B53F" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "792F8ACD031FA9CE57BE11A5";
+		};
+		"EFFE8CEAC263308A54B4930F" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "54D02EAE5E114B3CDE66C9D4";
+		};
+		"CB88502DFAF5F36D7DED0F29" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "BCB286A769FDEF5BFF58FF77";
+		};
+		"1743C65532A7DD3DB13DA9E9" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "63EC7E719D659FA0E8E5F705";
+		};
+		"C8AA0765840735F294B5C5FC" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "folder";
+			"path" = "Huati/Resources";
+			"sourceTree" = "<group>";
+		};
+		"6C36FFE920F24CEDB7CFDBFC" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "folder.assetcatalog";
+			"path" = "Huati/Assets.xcassets";
+			"sourceTree" = "<group>";
+		};
+		"FDAD0CCE9029502B8F84AE8D" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "file.storyboard";
+			"path" = "Huati/LaunchScreen.storyboard";
+			"sourceTree" = "<group>";
+		};
+		"0BDFC2392C4F9A401DB5348F" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.xml";
+			"path" = "Huati/PrivacyInfo.xcprivacy";
+			"sourceTree" = "<group>";
+		};
+		"CF5B3313D417F4C4CAB9BC99" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "C8AA0765840735F294B5C5FC";
+		};
+		"222F0DBFFE5EB23DCD3FD16F" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "6C36FFE920F24CEDB7CFDBFC";
+		};
+		"8A24E2FBB6B04F1C1081E292" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "FDAD0CCE9029502B8F84AE8D";
+		};
+		"ECEEA0346EA710E5EAA22643" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "0BDFC2392C4F9A401DB5348F";
+		};
+		"68E77A9D7BC78A97D4F4E27B" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.plist.xml";
+			"path" = "Huati/Info.plist";
+			"sourceTree" = "<group>";
+		};
+		"640BF165A320BE54A8E4B48C" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "HuatiTests/HuatiTests.swift";
+			"sourceTree" = "<group>";
+		};
+		"D69F42968BCDC434DFE88400" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "640BF165A320BE54A8E4B48C";
+		};
+		"4E783A9E10D2A8ABA38CD11C" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.application";
+			"includeInIndex" = "0";
+			"path" = "Huati.app";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"6C7CCDEB3609F1FAA874E941" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.cfbundle";
+			"includeInIndex" = "0";
+			"path" = "HuatiTests.xctest";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"BCE16DD0260827ECF338C787" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"17BA0473D695A907A6D8F095",
+				"86619490A83265182AC56AA4",
+				"47F0921F6E044775C4FA7091",
+				"8E1E13172D5EB0AB2E168453",
+				"C67032624E4FC48858B46DCE",
+				"1394538E5A4F6F28799026BE",
+				"4C402775A160B221ECEEA568",
+				"792F8ACD031FA9CE57BE11A5",
+				"54D02EAE5E114B3CDE66C9D4",
+				"BCB286A769FDEF5BFF58FF77",
+				"63EC7E719D659FA0E8E5F705",
+			);
+			"name" = "Sources";
+			"sourceTree" = "<group>";
+		};
+		"0189424A5A60FED329FA868E" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"C8AA0765840735F294B5C5FC",
+				"6C36FFE920F24CEDB7CFDBFC",
+				"FDAD0CCE9029502B8F84AE8D",
+				"0BDFC2392C4F9A401DB5348F",
+				"68E77A9D7BC78A97D4F4E27B",
+			);
+			"name" = "Resources";
+			"sourceTree" = "<group>";
+		};
+		"04D13FD0AA6F0197CF2C9990" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"640BF165A320BE54A8E4B48C",
+			);
+			"name" = "Tests";
+			"sourceTree" = "<group>";
+		};
+		"FBDC4F23F93125BBEEAE800C" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"4E783A9E10D2A8ABA38CD11C",
+				"6C7CCDEB3609F1FAA874E941",
+			);
+			"name" = "Products";
+			"sourceTree" = "<group>";
+		};
+		"B28B7AF69320201D1CF206EB" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"BCE16DD0260827ECF338C787",
+				"0189424A5A60FED329FA868E",
+				"04D13FD0AA6F0197CF2C9990",
+				"FBDC4F23F93125BBEEAE800C",
+			);
+			"sourceTree" = "<group>";
+		};
+		"A1C3CEACCD4F322048E69D2D" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+				"2659A08BBAA8350605F8DBC1",
+				"74AD1C36B86070794F4D1754",
+				"3AA6693EC8FDB6650D9F5184",
+				"0BF2C6D31AF841585F56FEDE",
+				"A5CA6C180302CE5D092B7EE5",
+				"9E9C9B6F03B666D98644DA7B",
+				"C0E96FAA9FDBCD4046BC1EC3",
+				"4E1663BA37D39D4B8AE3B53F",
+				"EFFE8CEAC263308A54B4930F",
+				"CB88502DFAF5F36D7DED0F29",
+				"1743C65532A7DD3DB13DA9E9",
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"FF4A15EEA61D4A3B097C1C27" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+				"CF5B3313D417F4C4CAB9BC99",
+				"222F0DBFFE5EB23DCD3FD16F",
+				"8A24E2FBB6B04F1C1081E292",
+				"ECEEA0346EA710E5EAA22643",
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"326A678791C89F5FAABDFBFA" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"675A1198D3AB24DD163B2CEE" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+				"D69F42968BCDC434DFE88400",
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"2B5BE8CDD554117262CDACC9" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"AA60E62D3E7BAEF305ADABEA" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "17.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"SWIFT_STRICT_CONCURRENCY" = "minimal";
+				"ENABLE_TESTABILITY" = "YES";
+				"GCC_C_LANGUAGE_STANDARD" = "gnu17";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+			};
+			"name" = "Debug";
+		};
+		"3D553B551D2688E2E7A15153" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "17.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"SWIFT_STRICT_CONCURRENCY" = "minimal";
+				"ENABLE_TESTABILITY" = "YES";
+				"GCC_C_LANGUAGE_STANDARD" = "gnu17";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+			};
+			"name" = "Release";
+		};
+		"4BC187BDC04E3F4C657813CD" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"AA60E62D3E7BAEF305ADABEA",
+				"3D553B551D2688E2E7A15153",
+			);
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"20E6C50054BB2DC08A114B85" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"PRODUCT_BUNDLE_IDENTIFIER" = "cn.huati.assistant.ios";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"INFOPLIST_FILE" = "Huati/Info.plist";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"MARKETING_VERSION" = "2.0.4";
+				"CURRENT_PROJECT_VERSION" = "18";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+			};
+			"name" = "Debug";
+		};
+		"11237771934941B0D50175EC" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"PRODUCT_BUNDLE_IDENTIFIER" = "cn.huati.assistant.ios";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"INFOPLIST_FILE" = "Huati/Info.plist";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"MARKETING_VERSION" = "2.0.4";
+				"CURRENT_PROJECT_VERSION" = "18";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+			};
+			"name" = "Release";
+		};
+		"199F2B445152728BBDCDCE23" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"20E6C50054BB2DC08A114B85",
+				"11237771934941B0D50175EC",
+			);
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"641440E13AD400DE55339C10" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"PRODUCT_BUNDLE_IDENTIFIER" = "cn.huati.assistant.ios.tests";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"TEST_HOST" = "$(BUILT_PRODUCTS_DIR)/Huati.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Huati";
+				"BUNDLE_LOADER" = "$(TEST_HOST)";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+			};
+			"name" = "Debug";
+		};
+		"6B1A60DD4931465C869F76B6" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"PRODUCT_BUNDLE_IDENTIFIER" = "cn.huati.assistant.ios.tests";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"TEST_HOST" = "$(BUILT_PRODUCTS_DIR)/Huati.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Huati";
+				"BUNDLE_LOADER" = "$(TEST_HOST)";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+			};
+			"name" = "Release";
+		};
+		"9926362702D740A84312D394" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"641440E13AD400DE55339C10",
+				"6B1A60DD4931465C869F76B6",
+			);
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"F75109BEB4DD8800DA6B45F8" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "199F2B445152728BBDCDCE23";
+			"buildPhases" = (
+				"A1C3CEACCD4F322048E69D2D",
+				"326A678791C89F5FAABDFBFA",
+				"FF4A15EEA61D4A3B097C1C27",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+			);
+			"name" = "Huati";
+			"productName" = "Huati";
+			"productReference" = "4E783A9E10D2A8ABA38CD11C";
+			"productType" = "com.apple.product-type.application";
+		};
+		"7E85D4A68785761E1DBB22D8" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "98F54143AB4E86B28C3AFEE0";
+			"proxyType" = "1";
+			"remoteGlobalIDString" = "F75109BEB4DD8800DA6B45F8";
+			"remoteInfo" = "Huati";
+		};
+		"BAE932EF166B50AB877FDC6F" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "F75109BEB4DD8800DA6B45F8";
+			"targetProxy" = "7E85D4A68785761E1DBB22D8";
+		};
+		"C062A5A4A7F4F37DD90F54CB" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "9926362702D740A84312D394";
+			"buildPhases" = (
+				"675A1198D3AB24DD163B2CEE",
+				"2B5BE8CDD554117262CDACC9",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+				"BAE932EF166B50AB877FDC6F",
+			);
+			"name" = "HuatiTests";
+			"productName" = "HuatiTests";
+			"productReference" = "6C7CCDEB3609F1FAA874E941";
+			"productType" = "com.apple.product-type.bundle.unit-test";
+		};
+		"98F54143AB4E86B28C3AFEE0" = {
+			"isa" = "PBXProject";
+			"attributes" = {
+				"BuildIndependentTargetsInParallel" = "YES";
+				"LastUpgradeCheck" = "1600";
+				"TargetAttributes" = {
+					"F75109BEB4DD8800DA6B45F8" = {
+						"CreatedOnToolsVersion" = "16.0";
+					};
+					"C062A5A4A7F4F37DD90F54CB" = {
+						"CreatedOnToolsVersion" = "16.0";
+						"TestTargetID" = "F75109BEB4DD8800DA6B45F8";
+					};
+				};
+			};
+			"buildConfigurationList" = "4BC187BDC04E3F4C657813CD";
+			"compatibilityVersion" = "Xcode 14.0";
+			"developmentRegion" = "zh-Hans";
+			"hasScannedForEncodings" = "0";
+			"knownRegions" = (
+				"zh-Hans",
+				"en",
+				"Base",
+			);
+			"mainGroup" = "B28B7AF69320201D1CF206EB";
+			"productRefGroup" = "FBDC4F23F93125BBEEAE800C";
+			"projectDirPath" = "";
+			"projectRoot" = "";
+			"targets" = (
+				"F75109BEB4DD8800DA6B45F8",
+				"C062A5A4A7F4F37DD90F54CB",
+			);
+		};
+	};
+	"rootObject" = "98F54143AB4E86B28C3AFEE0";
+}

@@ -1,0 +1,428 @@
+[
+  {
+    "source": "android/app/src/main/assets/art/backgrounds/geometry_01.webp",
+    "output": "Huati/Resources/Art/backgrounds/geometry_01.jpg",
+    "width": 1080,
+    "height": 2160,
+    "sha256": "207088bb01e6416a583e8f87d875bf0bdb17b764692d99ed8beb93d078ea9cf0"
+  },
+  {
+    "source": "android/app/src/main/assets/art/backgrounds/geometry_02.webp",
+    "output": "Huati/Resources/Art/backgrounds/geometry_02.jpg",
+    "width": 1080,
+    "height": 2160,
+    "sha256": "3b90b9e312e47095ebfcf754b2b7086fca764dbb3f894e7f52bd779467b469be"
+  },
+  {
+    "source": "android/app/src/main/assets/art/backgrounds/geometry_03.webp",
+    "output": "Huati/Resources/Art/backgrounds/geometry_03.jpg",
+    "width": 1080,
+    "height": 2160,
+    "sha256": "43b9b9d05fd85cec017e44f182a7604f2fc6f831538bc5ac46632cb5334761e8"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/01_01_normal.webp",
+    "output": "Huati/Resources/Art/mascots/01_01_normal.png",
+    "width": 231,
+    "height": 424,
+    "sha256": "b99265f247e89d877b4b8325513c809491c3adf44a25b3f2840b39a69b3587f3"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/01_01_running.webp",
+    "output": "Huati/Resources/Art/mascots/01_01_running.png",
+    "width": 243,
+    "height": 359,
+    "sha256": "5276ddee335547218939a850c15f1b9466dd8de7a129041418800efae56af10f"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/01_02_normal.webp",
+    "output": "Huati/Resources/Art/mascots/01_02_normal.png",
+    "width": 222,
+    "height": 441,
+    "sha256": "b682db7af9850842454ca5b51bb8f3b170ebcafdd1bddca370ad78b91ec3b820"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/01_02_running.webp",
+    "output": "Huati/Resources/Art/mascots/01_02_running.png",
+    "width": 227,
+    "height": 380,
+    "sha256": "f674d787bdb71289ed85edd053d1c2bf90377a1ad1b65ee349daa3e1280854e2"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/01_03_normal.webp",
+    "output": "Huati/Resources/Art/mascots/01_03_normal.png",
+    "width": 227,
+    "height": 427,
+    "sha256": "c1c6a89346cea2050c2cc5ae15879ca17eead7772244587ee7af04b77a315b74"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/01_03_running.webp",
+    "output": "Huati/Resources/Art/mascots/01_03_running.png",
+    "width": 231,
+    "height": 377,
+    "sha256": "9c5449adab6eb86836acc3085a38fab2ebd64d56163c80ea08f429273d48928c"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/02_01_normal.webp",
+    "output": "Huati/Resources/Art/mascots/02_01_normal.png",
+    "width": 437,
+    "height": 768,
+    "sha256": "26a3bb8ca31c28886c44c9ce4395919ce107f4a50f662b69950094f3a199a1cb"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/02_01_running.webp",
+    "output": "Huati/Resources/Art/mascots/02_01_running.png",
+    "width": 554,
+    "height": 768,
+    "sha256": "1e31bf09a49d2461d2890b3377ece9c421306f970493a532918b315a9e81a690"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/02_02_normal.webp",
+    "output": "Huati/Resources/Art/mascots/02_02_normal.png",
+    "width": 452,
+    "height": 768,
+    "sha256": "1fd11dc4900edf13c9e18c1f9921d0cf7eb304e9b3e29468649a341a86ffd4f0"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/02_02_running.webp",
+    "output": "Huati/Resources/Art/mascots/02_02_running.png",
+    "width": 528,
+    "height": 768,
+    "sha256": "46c212d4299640d1f5a9778e9131123bc9e5cbbdf308e0567359c9ae5a1286c0"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/02_03_normal.webp",
+    "output": "Huati/Resources/Art/mascots/02_03_normal.png",
+    "width": 439,
+    "height": 768,
+    "sha256": "07725dcdb920eda5d3cb9c86b052699a6fbdaa7699f4ea54e6cf7daae0cc6b0b"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/02_03_running.webp",
+    "output": "Huati/Resources/Art/mascots/02_03_running.png",
+    "width": 557,
+    "height": 768,
+    "sha256": "e7de5cef1876ce6659a10e85a7e91002c5669ae88d54b9dcb678660927562ad4"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/03_01_normal.webp",
+    "output": "Huati/Resources/Art/mascots/03_01_normal.png",
+    "width": 457,
+    "height": 768,
+    "sha256": "5c7cf7184203bcf505b8daeb50ec260048c3e801df6cfe073f9d4d8ad7f701f5"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/03_01_running.webp",
+    "output": "Huati/Resources/Art/mascots/03_01_running.png",
+    "width": 541,
+    "height": 768,
+    "sha256": "ff94503f8a55e4c291a2cd95a02d7532eedff06adcf9cdb5278a08d22e63d3f6"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/03_02_normal.webp",
+    "output": "Huati/Resources/Art/mascots/03_02_normal.png",
+    "width": 474,
+    "height": 768,
+    "sha256": "f77647b3b3014f278ae71c883293c56f80c9f14657e4467adb11dd610e9b26a2"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/03_02_running.webp",
+    "output": "Huati/Resources/Art/mascots/03_02_running.png",
+    "width": 522,
+    "height": 768,
+    "sha256": "f53fa3e9fe4ac00f9bb6ce5ced0e5d8dc8d7b7145eb1a90ceba027d6c0643674"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/03_03_normal.webp",
+    "output": "Huati/Resources/Art/mascots/03_03_normal.png",
+    "width": 464,
+    "height": 768,
+    "sha256": "82ace125ee6885e41db820b52461f07fa1fe2ef22cb2d8e5ebe8dd563c583812"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/03_03_running.webp",
+    "output": "Huati/Resources/Art/mascots/03_03_running.png",
+    "width": 551,
+    "height": 768,
+    "sha256": "826534be726f4656671603be9b10a06d38d4fc537f4aa4a1c5b6254039034cd1"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/04_01_normal.webp",
+    "output": "Huati/Resources/Art/mascots/04_01_normal.png",
+    "width": 459,
+    "height": 768,
+    "sha256": "e4261284dd13fb40df030418e820c8862edf0869884ae6c6b6fbbdde9f3e53ee"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/04_01_running.webp",
+    "output": "Huati/Resources/Art/mascots/04_01_running.png",
+    "width": 549,
+    "height": 768,
+    "sha256": "ca6930b8106c1f6ba722e638b3b1082ae7045c10bc8d8b92961d9ea19c0872fc"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/04_02_normal.webp",
+    "output": "Huati/Resources/Art/mascots/04_02_normal.png",
+    "width": 466,
+    "height": 768,
+    "sha256": "f4ef7e95248fbe13ea4d24dc5d1f3c3911569d110afa15ef3d429f5286718276"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/04_02_running.webp",
+    "output": "Huati/Resources/Art/mascots/04_02_running.png",
+    "width": 555,
+    "height": 768,
+    "sha256": "ea5816954447ef9413711aabe139a402e1fc06fbb7c580b634c069d7071a4904"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/04_03_normal.webp",
+    "output": "Huati/Resources/Art/mascots/04_03_normal.png",
+    "width": 473,
+    "height": 768,
+    "sha256": "dba49a72bd2ea5f6125f0c1f2049b8656ab7f43153774a7f349cd6570a5e0f08"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/04_03_running.webp",
+    "output": "Huati/Resources/Art/mascots/04_03_running.png",
+    "width": 539,
+    "height": 768,
+    "sha256": "c0c37962481defec8d360029928bc7dd9277820da5af9fe3c92529b7a470e0f2"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/05_01_normal.webp",
+    "output": "Huati/Resources/Art/mascots/05_01_normal.png",
+    "width": 463,
+    "height": 768,
+    "sha256": "bfd94b9fbaecf50bbcbd72b575a2f1beda4968ea343f4106c2ca07833916f9c2"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/05_01_running.webp",
+    "output": "Huati/Resources/Art/mascots/05_01_running.png",
+    "width": 552,
+    "height": 768,
+    "sha256": "8315359179f1ab37abc1c5821f96b88531c7ba523ca25271ed8fead589326153"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/05_02_normal.webp",
+    "output": "Huati/Resources/Art/mascots/05_02_normal.png",
+    "width": 408,
+    "height": 768,
+    "sha256": "6fd1659aa08d1f2ae007ac5e82869188cac5b210ed7918adc2abc29f5cb3e4b2"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/05_02_running.webp",
+    "output": "Huati/Resources/Art/mascots/05_02_running.png",
+    "width": 528,
+    "height": 768,
+    "sha256": "b8682defd4a064aef46b376f51524d797899d4020a7c6660e27ab7f60c654dcf"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/05_03_normal.webp",
+    "output": "Huati/Resources/Art/mascots/05_03_normal.png",
+    "width": 466,
+    "height": 768,
+    "sha256": "934bc9211400d5907b1ec72c831d82bdb20c574f373f9b2191265da2d71137c2"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/05_03_running.webp",
+    "output": "Huati/Resources/Art/mascots/05_03_running.png",
+    "width": 543,
+    "height": 768,
+    "sha256": "29effa8755e58c0c6a7555dd1754da7e4ec07695fa3ba72eb83e364d57dbac28"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/06_01_normal.webp",
+    "output": "Huati/Resources/Art/mascots/06_01_normal.png",
+    "width": 467,
+    "height": 768,
+    "sha256": "c2381a2f7f79b731f9cb404cc6831c61962aed79a329fad784a5485dc6fd93a3"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/06_01_running.webp",
+    "output": "Huati/Resources/Art/mascots/06_01_running.png",
+    "width": 735,
+    "height": 768,
+    "sha256": "8855cd7c3146e2dd30988f9d3f926af964d72baf2665ba18a05926479f75bbe1"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/06_02_normal.webp",
+    "output": "Huati/Resources/Art/mascots/06_02_normal.png",
+    "width": 443,
+    "height": 768,
+    "sha256": "771d914f59a473d26adc1ad3d7930268f1628e86e43d987a71504d3a291b630d"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/06_02_running.webp",
+    "output": "Huati/Resources/Art/mascots/06_02_running.png",
+    "width": 505,
+    "height": 768,
+    "sha256": "a96cbc7b2677e459e1f91b6e8d2448a3be9060d345bff600ca2a99b7ab89d23f"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/06_03_normal.webp",
+    "output": "Huati/Resources/Art/mascots/06_03_normal.png",
+    "width": 452,
+    "height": 768,
+    "sha256": "1ff87144e61082b4d93c33836f71b6ce25109b96bdca93a52385966124530056"
+  },
+  {
+    "source": "android/app/src/main/assets/art/mascots/06_03_running.webp",
+    "output": "Huati/Resources/Art/mascots/06_03_running.png",
+    "width": 538,
+    "height": 768,
+    "sha256": "90bf814686b8f9075b0a21b337047b5f658f7a1cf384c900be06fa240a38bca0"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_01.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_01.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "c2507f2fb88ece7c3084ecff85ff2530af265168e78d32bd8c0cb664893ca4ba"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_02.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_02.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "e30e96e196e2bc866dd07325eaad80e121748bf1b1107a2bc170590bc3031bd8"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_03.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_03.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "bd07dd3a757a6a939159a03945aa83f16a8a0dd008d4979c562af6d16c8ea469"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_04.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_04.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "ffaf298b81340e042a7380235a622ee8fbf3181fb5c24ef4613e03e5ddb0180a"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_05.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_05.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "ee008ba8f8a7ac0c2f334fd7a676f4554bc1676d5d2a270fb7ff8f44b6eb6d83"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_06.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_06.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "869e67571e402faba9a565eed00442fddb459445aa9e18fb6a705a42a5760ba7"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_07.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_07.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "e3a4f00aea3228b3706c15b4418f3abdac1b43e28f43d54719531921a17b5c16"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_08.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_08.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "152e7eeab80c399b2b26547538fe9247847e960e0c93a0f175bd02e7b2362d91"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_09.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_09.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "caefe5f21475adb29ccf68f08bd4c110cf796d3acb736eb19d553bd400f2c19c"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_10.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_10.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "2fd0f8b898399f856f6c604e7e019e6752584782bf889f3a9bdc55e580ffed1c"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_11.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_11.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "3971338fc062d6185c8c7a0bb2b435e6b2db9cb7901ed446d894bed5fca6f70e"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_12.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_12.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "5e62af2776e20711da9fff6b6e7f8253d16f3ab8562c0ae23928a905a6d0e10e"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_13.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_13.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "1ccefac0b7a906e85c5053aa08dd0d57cda5cc9f30003795f53ad14aaedc5d75"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_14.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_14.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "28fce43df23f494f4d49a2dc241c3f09099e5598f2445413c7357261f657f5c5"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_15.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_15.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "c8707a38ed787850b41a2eee6932e9f9afe6612fb5448ff845af0f8185505011"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_16.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_16.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "419afa092a26c49e0a8a6f8cca13bff29d72280bb467501b31443ed898d33115"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_17.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_17.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "02004f54385048c11f28a2cb6465010df5912f1283f06140d200bbefb0f80615"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_18.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_18.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "6534a99fc0db8c3a8b2c38ee98d84129e93dc7cb889eb741ea081ef13266fc23"
+  },
+  {
+    "source": "android/app/src/main/assets/art/wallpapers/scene_19.webp",
+    "output": "Huati/Resources/Art/wallpapers/scene_19.jpg",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "ba3ed24d69710d982ea2ad1f6f22e7fc6888c64c574d8c21a25c7811c08c21e4"
+  },
+  {
+    "source": "android/app/src/main/res/drawable-nodpi/brand_head.webp",
+    "output": "Huati/Resources/Art/icons/brand_head.png",
+    "sha256": "75436c8bb5470c09099a43d0525a48f0eac116db1528c8c9d4eace98e4912a01"
+  },
+  {
+    "source": "android/app/src/main/res/drawable-nodpi/launcher_head.webp",
+    "output": "Huati/Resources/Art/icons/launcher_head.png",
+    "sha256": "bf73fe1a33f3fed434b7c57b24ff15ba682e0fa2d157e5ede7e64c1d7e8b8001"
+  },
+  {
+    "source": "android/app/src/main/res/drawable-nodpi/nav_running.webp",
+    "output": "Huati/Resources/Art/icons/nav_running.png",
+    "sha256": "5276ddee335547218939a850c15f1b9466dd8de7a129041418800efae56af10f"
+  },
+  {
+    "source": "android/app/src/main/res/drawable-nodpi/nav_account.webp",
+    "output": "Huati/Resources/Art/icons/nav_account.png",
+    "sha256": "39f82780a9f4ab99d434f436aad51a395c336d5cdf24cb6310dab50875e1efb4"
+  }
+]

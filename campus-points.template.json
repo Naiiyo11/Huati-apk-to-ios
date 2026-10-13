@@ -1,0 +1,11 @@
+{
+  "campus": "华东理工大学奉贤校区",
+  "coordinate_system": "GCJ02",
+  "source": "公开参考中的三个已知点位，仅作导入格式示例",
+  "complete": false,
+  "points": [
+    {"point_name": "单双杠练习场", "lat": 30.832999, "lng": 121.509337},
+    {"point_name": "考核点 38", "lat": 30.827536, "lng": 121.503933},
+    {"point_name": "体育馆主馆", "lat": 30.829844, "lng": 121.507996}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "app": "华理跑步姬",
+  "version": "2.0.4",
+  "platform": "iOS",
+  "minimum_ios": "17.0",
+  "swift_files_parsed": 12,
+  "swift_syntax_parser": "tree-sitter-swift; not Swift type checking",
+  "xcode_project_parsed": true,
+  "mac_command_scripts_parsed": 3,
+  "asset_files_verified": 62,
+  "core_tests": 39,
+  "test_timezones": [
+    "UTC",
+    "Asia/Shanghai",
+    "America/Los_Angeles"
+  ],
+  "local_tests_passed": true,
+  "native_xctest_run": false,
+  "xcode_compiled": false,
+  "signed_ipa_produced": false,
+  "iphone_device_test": false,
+  "live_account_requests": false,
+  "limitations": [
+    "Windows host cannot compile/link/sign iOS app; Xcode build required on Mac.",
+    "iOS BGProcessingTask earliestBeginDate does not guarantee precise background start or submission."
+  ]
+}
