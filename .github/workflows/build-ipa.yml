@@ -11,25 +11,26 @@ on:
 jobs:
   build:
     name: Build iOS IPA
-    runs-on: macos-15
+    runs-on: macos-14
 
     steps:
       - name: 📥 拉取代码
         uses: actions/checkout@v4
 
-      - name: 🎯 选择 Xcode + 安装缺失平台
+      - name: 🎯 选择 Xcode 版本
         run: |
-          # 优先 Xcode 15
-          XCODE=$(ls -d /Applications/Xcode_15*.app 2>/dev/null | tail -1)
+          XCODE=$(ls -d /Applications/Xcode_16*.app 2>/dev/null | tail -1)
           if [ -z "$XCODE" ]; then
-            echo ">> Xcode 15 不可用，使用 Xcode 16 并安装 iOS 平台..."
-            XCODE=$(ls -d /Applications/Xcode_16*.app 2>/dev/null | tail -1)
-            sudo xcode-select -s "$XCODE/Contents/Developer"
-            sudo xcodebuild -downloadPlatform iOS
-          else
-            sudo xcode-select -s "$XCODE/Contents/Developer"
+            XCODE=$(ls -d /Applications/Xcode_15*.app 2>/dev/null | tail -1)
           fi
+          if [ -z "$XCODE" ]; then
+            echo "❌ 找不到 Xcode"
+            exit 1
+          fi
+          echo "✅ 使用: $XCODE"
+          sudo xcode-select -s "$XCODE/Contents/Developer"
           xcodebuild -version
+
 
 
 
