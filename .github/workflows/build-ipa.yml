@@ -29,17 +29,19 @@ jobs:
           echo "===== AppModel.swift 第 90-100 行 ====="
           sed -n '90,100p' Huati/Core/AppModel.swift
 
-      - name: 🔧 修复：删除严格并发设置
+      - name: 🔧 创建 xcconfig（禁用严格并发）
         run: |
-          # 直接删掉 SWIFT_STRICT_CONCURRENCY 行，让 Xcode 用默认
-          sed -i '' '/SWIFT_STRICT_CONCURRENCY/d' Huati.xcodeproj/project.pbxproj
-          echo "✅ 已删除 SWIFT_STRICT_CONCURRENCY 配置"
+          cat > disable_concurrency.xcconfig << 'EOF'
+          OTHER_SWIFT_FLAGS = $(inherited) -disable-upcoming-feature StrictConcurrency
+          EOF
+          echo "✅ xcconfig 已创建"
 
       - name: 🔨 编译
         run: |
-          xcodebuild archive -project Huati.xcodeproj -scheme Huati -configuration Release -sdk iphoneos -archivePath ./build/Huati.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO SWIFT_VERSION=5.0
+          xcodebuild archive -project Huati.xcodeproj -scheme Huati -configuration Release -sdk iphoneos -archivePath ./build/Huati.xcarchive -xcconfig disable_concurrency.xcconfig CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO SWIFT_VERSION=5.0
           if [ ! -d "./build/Huati.xcarchive" ]; then echo "❌ Archive 失败" && exit 1; fi
           echo "✅ Archive 成功"
+
 
 
       - name: 📦 打包 IPA
