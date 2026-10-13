@@ -21,51 +21,39 @@ jobs:
           sudo xcode-select -s "$XCODE/Contents/Developer"
           xcodebuild -version
 
-      - name: 🔍 诊断：查看问题代码
-        run: |
-          echo "===== pbxproj 中的 SWIFT_STRICT_CONCURRENCY ====="
-          grep -n "SWIFT_STRICT_CONCURRENCY" Huati.xcodeproj/project.pbxproj || echo "(未设置)"
-          echo ""
-          echo "===== AppModel.swift 第 90-100 行 ====="
-          sed -n '90,100p' Huati/Core/AppModel.swift
-
-      - name: 🔧 修复 AppModel.swift 并发问题
+      - name: 🔧 修复源码
         run: |
           python3 << 'PYEOF'
           with open('Huati/Core/AppModel.swift', 'r') as f:
-              lines = f.readlines()
+              content = f.read()
           
-          # 第93行（0-based:92）是 Timer 闭包 { [weak self] _ in
-          # 第94行（0-based:93）是 Task { @MainActor in  
-          # 第95行（0-based:94）是 guard let self else { return }
+          old = '''{ [weak self] _ in
+                    Task { @MainActor in
+                        guard let self else { return }'''
           
-          # 在 Timer 闭包后插入 guard
-          lines.insert(93, '            guard let self else { return }\n')
-          # Task 行现在在 94（0-based）
-          lines[94] = lines[94].replace('Task { @MainActor in', 'Task { @MainActor [self] in')
-          # 删除原来的 guard 行（现在在 95，0-based）
-          del lines[95]
+          new = '''{ [weak self] _ in
+                    guard let self else { return }
+                    Task { @MainActor [self] in'''
           
-          with open('Huati/Core/AppModel.swift', 'w') as f:
-              f.writelines(lines)
-          print("✅ 源码修复完成")
+          if old in content:
+              content = content.replace(old, new)
+              with open('Huati/Core/AppModel.swift', 'w') as f:
+                  f.write(content)
+              print("✅ 源码修复完成")
+          else:
+              print("⚠️ 未找到目标代码，跳过修复")
           PYEOF
-
 
       - name: 🔨 编译
         run: |
-          xcodebuild archive -project Huati.xcodeproj -scheme Huati -configuration Release -sdk iphoneos -archivePath ./build/Huati.xcarchive -xcconfig disable_concurrency.xcconfig CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO SWIFT_VERSION=5.0
-          if [ ! -d "./build/Huati.xcarchive" ]; then echo "❌ Archive 失败" && exit 1; fi
+          xcodebuild archive -project Huati.xcodeproj -scheme Huati -configuration Release -sdk iphoneos -archivePath ./build/Huati.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO SWIFT_VERSION=5.0
+          if [ ! -d "./build/Huati.xcarchive" ]; then echo "❌" && exit 1; fi
           echo "✅ Archive 成功"
-
-
 
       - name: 📦 打包 IPA
         run: |
           cd ./build/Huati.xcarchive/Products
-          cp -R Applications Payload
-          zip -qr Huati.ipa Payload
-          mv Huati.ipa ../../Huati-unsigned.ipa
+          cp -R Applications Payload && zip -qr Huati.ipa Payload && mv Huati.ipa ../../Huati-unsigned.ipa
           cd ../..
           echo "✅ IPA: $(ls -lh Huati-unsigned.ipa | awk '{print $5}')"
 
