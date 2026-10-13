@@ -40,17 +40,10 @@ jobs:
 
       - name: 🔨 编译
         run: |
-          xcodebuild archive \
-            -project Huati.xcodeproj \
-            -scheme Huati \
-            -configuration Release \
-            -sdk iphoneos \
-            -archivePath ./build/Huati.xcarchive \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO \
-            SWIFT_VERSION=5.0 \
+          xcodebuild archive -project Huati.xcodeproj -scheme Huati -configuration Release -sdk iphoneos -archivePath ./build/Huati.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO SWIFT_VERSION=5.0
+          if [ ! -d "./build/Huati.xcarchive" ]; then echo "❌ Archive 失败" && exit 1; fi
           echo "✅ Archive 成功"
+
 
       - name: 📦 打包 IPA
         run: |
