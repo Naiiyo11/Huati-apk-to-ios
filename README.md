@@ -1,5 +1,7 @@
 # 华理跑步姬 iOS 2.0.4
 
+感谢作者f（x）=
+
 这是 v2.0.4 的原生 iPhone / iPad 移植工程，使用 SwiftUI 界面与苹果系统网络、定位、加密存储和后台任务，无第三方运行时依赖。最低 iOS 17，建议使用 Xcode 16 或更新版本。
 
 当前交付为 **完整 Xcode 工程，不是已签名 IPA**。本次在 Windows 上检查了工程结构、Swift 语法、资源和本地规则；尚未执行 Xcode 编译、原生 XCTest 或 iPhone 真机验证。Mac 上请先运行 `Verify-iOS.command`，或者在 Xcode 中编译及测试。
