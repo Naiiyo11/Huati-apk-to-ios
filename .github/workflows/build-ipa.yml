@@ -29,19 +29,11 @@ jobs:
           echo "===== AppModel.swift 第 90-100 行 ====="
           sed -n '90,100p' Huati/Core/AppModel.swift
 
-      - name: 🔧 修复：强制关闭严格并发
+      - name: 🔧 修复：删除严格并发设置
         run: |
-          # 在 pbxproj 中把 SWIFT_STRICT_CONCURRENCY 改为 minimal
-          if grep -q "SWIFT_STRICT_CONCURRENCY" Huati.xcodeproj/project.pbxproj; then
-            sed -i '' 's/SWIFT_STRICT_CONCURRENCY = [^;]*;/SWIFT_STRICT_CONCURRENCY = minimal;/g' Huati.xcodeproj/project.pbxproj
-            echo "✅ pbxproj 已改为 minimal"
-          else
-            echo "⚠️ pbxproj 中没有 SWIFT_STRICT_CONCURRENCY，保持默认"
-          fi
-          
-          # 替换 guard let self 为弱引用模式
-          sed -i '' 's/guard let self = self else/guard let self = self else/g' Huati/Core/AppModel.swift 2>/dev/null || true
-          echo "✅ 修复完成"
+          # 直接删掉 SWIFT_STRICT_CONCURRENCY 行，让 Xcode 用默认
+          sed -i '' '/SWIFT_STRICT_CONCURRENCY/d' Huati.xcodeproj/project.pbxproj
+          echo "✅ 已删除 SWIFT_STRICT_CONCURRENCY 配置"
 
       - name: 🔨 编译
         run: |
