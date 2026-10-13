@@ -91,13 +91,18 @@ import UIKit
         event("打开应用")
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { [weak self] _ in
-            Task { @MainActor in
-                guard let self else { return }
-                let time = Clock.now
-                if self.activeRecord || floor(time / 1000) != floor(self.now / 1000) { self.now = time }
-                if !self.busy { self.operation = Task { await self.service() } }
+        guard let self else { return }
+
+        Task { @MainActor [self] in
+            let time = Clock.now
+            if self.activeRecord || floor(time / 1000) != floor(self.now / 1000) {
+                self.now = time
+            }
+            if !self.busy {
+                self.operation = Task { await self.service() }
             }
         }
+    }
         UIApplication.shared.isIdleTimerDisabled = preferences.flag("keep_awake")
         operation = Task { await service() }
         BackgroundCoordinator.shared.schedule(self)
